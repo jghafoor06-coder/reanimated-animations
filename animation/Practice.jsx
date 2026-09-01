@@ -85,6 +85,7 @@ const Practice = () => {
           duration: 400,
         }),
       );
+      
 
       rotation.value = withTiming(180, {
         duration: 150,
