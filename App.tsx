@@ -1,45 +1,74 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+// import React from 'react';
+// import Animated, {
+//   useAnimatedStyle,
+//   useSharedValue,
+//   withSpring,
+// } from 'react-native-reanimated';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+// const App = () => {
+//   const translateX = useSharedValue(0);
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+//   // const handlePress = () => {
+//   //   width.value = withSpring(Math.random() * 100 + 50);
+//   // }
 
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
+//   //Animated style
 
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+//   const handlePress = () => {
+//     translateX.value += 50;
+//   };
 
+//   const animatedStyle = useAnimatedStyle(() => ({
+//     transform: [{ translateX: withSpring(translateX.value * 5) }],
+//   }));
+
+//   return (
+//     <Animated.View style={[styles.container]}>
+//       <Animated.View style={[styles.h, animatedStyle]} />
+//       <TouchableOpacity onPress={handlePress}>
+//         <Text>Press</Text>
+//       </TouchableOpacity>
+//     </Animated.View>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   h: {
+//     width: 100,
+//     height: 100,
+//     backgroundColor: 'violet',
+//   },
+// });
+
+
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+// import FadeInFadeOut from './animation/FadeInFadeOut'
+// import BounceOpen from './animation/BounceOpen'
+import Practice from './animation/Practice'
+
+const App = () => {
   return (
     <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
+      {/* <FadeInFadeOut/> */}
+      {/* <BounceOpen/> */}
+      <Practice/>
     </View>
-  );
+  )
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-});
-
-export default App;
+    flex: 1, 
+  }
+})
