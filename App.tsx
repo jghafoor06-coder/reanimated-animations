@@ -53,14 +53,22 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 // import FadeInFadeOut from './animation/FadeInFadeOut'
 // import BounceOpen from './animation/BounceOpen'
-import Practice from './animation/Practice'
+// import Practice from './animation/Practice'
+// import DropDownCard from './animation/DropDownCard'
+
+import { NavigationContainer } from '@react-navigation/native';
+import MyTabs from './application/navigation/RootNavigation'
 
 const App = () => {
   return (
     <View style={styles.container}>
       {/* <FadeInFadeOut/> */}
       {/* <BounceOpen/> */}
-      <Practice/>
+      {/* <Practice/> */}
+      {/* <DropDownCard/> */}
+      <NavigationContainer>
+        <MyTabs/>
+      </NavigationContainer>
     </View>
   )
 }

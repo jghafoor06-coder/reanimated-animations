@@ -89,31 +89,13 @@ const FadeInFadeOut = () => {
       image: 'https://picsum.photos/400/250?random=10',
     },
   ];
-  const opacity = useSharedValue(1);
-
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      opacity: opacity.value,
-    };
-  });
-
-  const fadeIn = () => {
-    opacity.value = withTiming(1, {
-      duration: 500,
-    });
-  };
-
-  const fadeOut = () => {
-    opacity.value = withTiming(0, {
-      duration: 500,
-    });
-  };
 
   return (
      <View style={styles.container}>
       <Animated.FlatList
         data={cards}
         keyExtractor={item => item.id.toString()}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item, index }) => (
           <Animated.View
             entering={FadeInUp.delay(index * 100).duration(500)}
