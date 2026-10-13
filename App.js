@@ -49,7 +49,7 @@
 // });
 
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 // import FadeInFadeOut from './animation/FadeInFadeOut'
 // import BounceOpen from './animation/BounceOpen'
 // import Practice from './animation/Practice'
@@ -59,7 +59,14 @@ import SignupScreen from './application/screens/SignupScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import MyTabs from './application/navigation/RootNavigation';
 
+import { logToken } from './application/utils/notificationPermission';
+
 const App = () => {
+  useEffect(() => {
+    let unsubscribe;
+    logToken().then(unsub => (unsubscribe = unsub));
+    return () => unsubscribe && unsubscribe();
+  }, []);
   return (
     <View style={styles.container}>
       {/* <FadeInFadeOut/> */}

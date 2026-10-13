@@ -12,20 +12,7 @@
           "package_name": "com.moti"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "903206008495-7kr9m7gj4puc0ns460tv4lu816p9ppqr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.moti",
-            "certificate_hash": "b4b4dfd52fd1e1f56773d06b9d74396f13e4da0d"
-          }
-        },
-        {
-          "client_id": "903206008495-6i48o3kih3blrgpl5ri49m8s3qjs82qc.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
           "current_key": "AIzaSyASjC3X04jQNFtKMJW3mL8FHYfEnvSWulY"
@@ -33,12 +20,7 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "903206008495-6i48o3kih3blrgpl5ri49m8s3qjs82qc.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
