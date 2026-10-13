@@ -48,16 +48,16 @@
 //   },
 // });
 
-
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 // import FadeInFadeOut from './animation/FadeInFadeOut'
 // import BounceOpen from './animation/BounceOpen'
 // import Practice from './animation/Practice'
 // import DropDownCard from './animation/DropDownCard'
+import SignupScreen from './application/screens/SignupScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
-import MyTabs from './application/navigation/RootNavigation'
+import MyTabs from './application/navigation/RootNavigation';
 
 const App = () => {
   return (
@@ -66,17 +66,18 @@ const App = () => {
       {/* <BounceOpen/> */}
       {/* <Practice/> */}
       {/* <DropDownCard/> */}
-      <NavigationContainer>
+      {/* <NavigationContainer>
         <MyTabs/>
-      </NavigationContainer>
+      </NavigationContainer> */}
+      <SignupScreen />
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-  }
-})
+    flex: 1,
+  },
+});
